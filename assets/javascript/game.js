@@ -56,10 +56,10 @@
         document.getElementById("letter").value = '';
     }
 
-    /* Start game - should ideally check for existing functions attached to window.onload */
+    /* Start game - should check for existing functions attached to window.onload */
     window.onload = setup();
 
-    /* buttons */
+    /* buttons - restart does a reset */
     document.getElementById("restart").onclick = setup;
 
     /* reset letter to guess on click */
@@ -81,7 +81,6 @@
                 /* has it been guessed (missed or matched) already? if so, abandon & add notice */
                 if ((lettersMatched && lettersMatched.indexOf(guess) > -1) || (lettersGuessed && lettersGuessed.indexOf(guess) > -1)) 
                 {
-//                    document.getElementById("output").innerHTML = '"' + guess.toUpperCase() + '"' + messages.guessed;                   
                     document.getElementById("outputrepeat").classList.add("warning");
                     $("#outputrepeat").prepend("<br><hr>" + '"' + guess.toUpperCase() + '"' + messages.guessed);
                 }
@@ -122,7 +121,6 @@
             {
                 document.getElementById("output").classList.add('error');
                 document.getElementById("output").innerHTML = messages.validLetter;
-//                $("#output").prepend("<br><hr>" + '"' + guess.toUpperCase() + '"' + messages.validLetter);
             }
         }
         /* error, if no letter is entered by player */
@@ -130,7 +128,6 @@
         {
             document.getElementById("output").classList.add('error');
             document.getElementById("output").innerHTML = messages.validLetter;
-//            $("#output").prepend("<br><hr>" + '"' + guess.toUpperCase() + '"' + messages.validLetter);
         }
         return false;
     };
