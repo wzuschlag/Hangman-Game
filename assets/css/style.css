@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background: url("../images/organic-tiles.png");
+}
+/* Keep it simple - improvement would be to not display characters */
+ .letter {
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    margin: 0 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    background-color: white;
+    color: white;
+}
+.current-word {
+    list-style: none;
+}
+.output, 
+.outputrepeat {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.correct {
+    background-color: black;
+}
+.error {
+    color: red;
+    opacity: 1;
+}
+.warning {
+    color: purple;
+    opacity: 1;
+}
+.win {
+    color: blue;
+    opacity: 1;
+}

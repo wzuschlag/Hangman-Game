@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>WalterZ HangmanGame</title>
+	
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+  	<!-- Added link to the jQuery Library -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Added link to the Bootstrap -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container" class="text-center">
+  <h1 class="text-center"><strong>Hangman Game</strong></h1>
+  <h1 class="text-center"><strong>Name your motorcycle</strong></h1>
+
+  <p class="text-center">Enter a letter from A to Z</p>
+	<form id="hangman">
+		<input id="guess" name="guess" type="submit" value="Guess">
+      <input type="text" maxlength="1" minlength="1" name="letter" id="letter">
+       <button id="restart" name="restart" type="button">Restart</button>    
+    </form>
+   <ul class="text-center" id="letters"></ul>
+   <p class="text-center" id="count"></p>
+   <p id="output" class="output"></p>
+   <p id="outputrepeat" class="outputrepeat"></p>
+   
+</div>
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
