@@ -25,6 +25,8 @@
         /* using document.getElementById to access the html page with data  */
         document.getElementById("count").innerHTML = "Starting with " + lives + " lives...Good luck!";
         document.getElementById("output").innerHTML = "";
+        document.getElementById("outputrepeat").innerHTML = "";
+        document.getElementById("bikepic").src = "assets/images/motorcycle-group.jpg";
         document.getElementById("letter").value = "";
 
         /* This is the guess button make sure its working and enabled */
@@ -50,6 +52,7 @@
         {
             document.getElementById("output").innerHTML = messages.lose;
             document.getElementById("output").classList.add('error');
+            document.getElementById("bikepic").src = "assets/images/biker-lost.jpg";
         }
 
         document.getElementById("letter").style.display = document.getElementById("guess").style.display = 'none';
