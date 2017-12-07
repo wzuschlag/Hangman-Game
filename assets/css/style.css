@@ -5,7 +5,7 @@ body {
     font-family: sans-serif;
     background: url("../images/organic-tiles.png");
 }
-/* Keep it simple - improvement would be to not display characters */
+
  .letter {
     display: inline-block;
     list-style: none;

@@ -47,6 +47,7 @@
         if (win) {
             document.getElementById("output").innerHTML = messages.win;
             document.getElementById("output").classList.add('win');
+            document.getElementById("bikepic").src = "assets/images/" + currentBike + ".jpg";
         } 
         else 
         {
@@ -73,13 +74,12 @@
     /* main guess function when user clicks #guess */
     document.getElementById('hangman').onsubmit = function (e) {
         if (e.preventDefault) e.preventDefault();
-//        document.getElementById("output").innerHTML = "";
         document.getElementById("output").classList.remove('error', 'warning');
         guess = document.getElementById("letter").value;
 
         /* does guess have a value? if yes continue, if no, error */
         if (guess) {
-            /* is guess a valid letter? if so carry on, else error */
+            /* is guess a valid letter? if so keep going, else error */
             if (availableLetters.indexOf(guess) > -1) {
                 /* has it been guessed (missed or matched) already? if so, abandon & add notice */
                 if ((lettersMatched && lettersMatched.indexOf(guess) > -1) || (lettersGuessed && lettersGuessed.indexOf(guess) > -1)) 
