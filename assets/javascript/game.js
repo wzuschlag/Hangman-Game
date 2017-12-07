@@ -48,12 +48,14 @@
             document.getElementById("output").innerHTML = messages.win;
             document.getElementById("output").classList.add('win');
             document.getElementById("bikepic").src = "assets/images/" + currentBike + ".jpg";
+            document.getElementById("myAudioWin").play();
         } 
         else 
         {
             document.getElementById("output").innerHTML = messages.lose;
             document.getElementById("output").classList.add('error');
             document.getElementById("bikepic").src = "assets/images/biker-lost.jpg";
+            document.getElementById("myAudioLose").play();
         }
 
         document.getElementById("letter").style.display = document.getElementById("guess").style.display = 'none';
